@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BierArg | Cervezas para la pasión</title>
+    <meta
+      name="description"
+      content="Centro distribuidor de cervezas para compras mayoristas y minoristas con una propuesta de venta enfocada en la pasión argentina."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand">
+          <span class="brand-mark">B</span>
+          <span>BierArg</span>
+        </div>
+        <nav class="menu">
+          <a href="#catalogo">Catálogo</a>
+          <a href="#distribuidor">Distribuidor</a>
+          <a href="#funnel">Ventas</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <button class="btn btn-light" id="cartButton">Carrito <span id="cartCount">0</span></button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Cerveza para cada momento</span>
+            <h1>La mejor cerveza para celebrar la pasión argentina.</h1>
+            <p>
+              Vendemos cervezas premium para bares, restaurantes, tiendas y clientes finales.
+              Nuestro centro distribuidor conecta productores, mayoristas y minoristas con entregas rápidas.
+            </p>
+            <div class="cta-row">
+              <a href="#catalogo" class="btn btn-primary">Ver catálogo</a>
+              <a href="#distribuidor" class="btn btn-secondary">Cotizar mayorista</a>
+            </div>
+            <ul class="hero-points">
+              <li>Entrega en 24/48 hs</li>
+              <li>Precios competitivos</li>
+              <li>Atención personalizada</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-label="Seleccion de cervezas">
+            <div class="ticket">
+              <p class="ticket-label">Oferta del día</p>
+              <h3>Pack Selección</h3>
+              <ul>
+                <li>12 latas lager</li>
+                <li>6 ipa premium</li>
+                <li>4 artesanales</li>
+              </ul>
+              <div class="ticket-row">
+                <span>$12.900</span>
+                <button class="mini-btn">Comprar</button>
+              </div>
+            </div>
+            <div class="floating-card card-1">
+              <span>+1.200 clientes</span>
+            </div>
+            <div class="floating-card card-2">
+              <span>Variedad nacional</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats">
+        <div class="container stats-grid">
+          <div>
+            <strong>1.200+</strong>
+            <span>Clientes activos</span>
+          </div>
+          <div>
+            <strong>98%</strong>
+            <span>Satisfacción</span>
+          </div>
+          <div>
+            <strong>24 hs</strong>
+            <span>Entrega promedio</span>
+          </div>
+          <div>
+            <strong>18</strong>
+            <span>Marcas premium</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="distribuidor" id="distribuidor">
+        <div class="container section-head">
+          <span class="eyebrow">Centro distribuidor</span>
+          <h2>Soluciones para compras mayoristas y minoristas</h2>
+        </div>
+        <div class="container distributor-grid">
+          <article class="info-card majorista">
+            <span class="tag">Mayorista</span>
+            <h3>Logística para negocios</h3>
+            <p>
+              Ideal para bares, restaurantes, supermercados y cadenas que necesitan stock constante,
+              diseño de exhibición y atención estratégica.
+            </p>
+            <ul>
+              <li>Descuentos por volumen</li>
+              <li>Pedidos programados</li>
+              <li>Soporte comercial</li>
+            </ul>
+            <button class="btn btn-primary">Solicitar cotización</button>
+          </article>
+
+          <article class="info-card minorista">
+            <span class="tag alt">Minorista</span>
+            <h3>Compra directa y rápida</h3>
+            <p>
+              Para tiendas, kioscos y clientes finales que buscan variedad, buena presentación y
+              una experiencia de compra simple y rápida.
+            </p>
+            <ul>
+              <li>Envíos a domicilio</li>
+              <li>Promociones semanales</li>
+              <li>Pago fácil y seguro</li>
+            </ul>
+            <button class="btn btn-secondary">Comprar ahora</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="catalogo" id="catalogo">
+        <div class="container section-head">
+          <span class="eyebrow">Nuestra selección</span>
+          <h2>El sabor de la Selección Argentina en cada botella</h2>
+        </div>
+
+        <div class="container filter-bar">
+          <button class="filter-btn active" data-filter="all">Todo</button>
+          <button class="filter-btn" data-filter="lager">Lager</button>
+          <button class="filter-btn" data-filter="ipa">IPA</button>
+          <button class="filter-btn" data-filter="artesanal">Artesanal</button>
+        </div>
+
+        <div class="container products-grid" id="productsGrid"></div>
+      </section>
+
+      <section class="funnel" id="funnel">
+        <div class="container section-head">
+          <span class="eyebrow">Embudo de ventas</span>
+          <h2>Un recorrido pensado para convertir atención en compra</h2>
+        </div>
+
+        <div class="container funnel-grid">
+          <div class="funnel-step">
+            <span>01</span>
+            <h3>Captación</h3>
+            <p>Generamos interés con promociones, redes y acciones de marca.</p>
+          </div>
+          <div class="funnel-step">
+            <span>02</span>
+            <h3>Interés</h3>
+            <p>Mostramos beneficios, variedades y un catálogo claro para cada público.</p>
+          </div>
+          <div class="funnel-step">
+            <span>03</span>
+            <h3>Decisión</h3>
+            <p>Ofrecemos costos, stock constante y atención comercial inmediata.</p>
+          </div>
+          <div class="funnel-step">
+            <span>04</span>
+            <h3>Compra</h3>
+            <p>Consolidamos la venta con entrega rápida y servicio postventa.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-banner">
+        <div class="container banner-box">
+          <div>
+            <span class="eyebrow">Apasionados por la cerveza</span>
+            <h2>Desde la cancha hasta la mesa, celebramos cada momento.</h2>
+          </div>
+          <a href="#contacto" class="btn btn-primary">Hablar con ventas</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contacto">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand">
+            <span class="brand-mark">B</span>
+            <span>BierArg</span>
+          </div>
+          <p>Distribución de cervezas para la pasión de cada consumidor argentino.</p>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li>ventas@bierarg.com.ar</li>
+            <li>+54 11 4700-1234</li>
+            <li>Av. de la Selección 2045</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
